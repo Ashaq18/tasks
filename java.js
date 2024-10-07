@@ -92,8 +92,88 @@ const subract=function(a,b){
 }
 console.log(subract(5,3));
 
-const multiply=(a,b)  a*b
+const multiply=(a,b)=>a*b
 console.log(multiply(4,5));
 
+//callstack
+//its a stack data structure(last in first out) where each function is pushed onto stack when called and popped off when completed.
+
+function greet(){
+    console.log("Hello!");
+    console.log("Hii!");
+
+}
+
+function start(){
+    greet();
+}
+
+function initialize(){
+    start();
+}
+initialize()
+
+//eventloop
+console.log("Start");
+
+setTimeout(() => {
+    console.log("this runs after 2 seconds")
+}, 2000);
+
+console.log('Ends');
+//Events
+//click:fired when an element is clicked
+//dbclick:fired when an element is double clicked
+//mousedown:fired when the mouse button is pressed down on an element
+//mouseup:fired when the mouse button is released over an element
+//mousemove:fired when the mouse move over an element
+//mouseenter:fired when the mouse enters an element
+//mouseleave:fired whwn the mouse leaves the element
+//mouseover:fired when the mouse pointer moves over an element or any of its children
+//mouseout:fired whwn the mousepointer leaves an element or any of its children
 
 
+//Temporal Dead Zone
+
+function example() {
+    console.log(myVar);
+    let myVar =5;
+    console.log(myVar)
+}
+example();
+
+//scope chaining
+//global variable:variable defined in the global context are accessible from anywhere in your code
+//function scope:variable declared within a function are accessible inly within that function
+//block scope:variable declaresd with let and const within a block (like within{}) are only accessable within the block
+
+const globalVar="I am a global variable";
+function outerfunction() {
+    const outerVar="I m from the outerfunction";
+    function innerfunction() {
+        const innervar="I m from the Inner function!";
+
+        console.log(globalVar);
+        console.log(outerVar)
+        console.log(InnerVar)
+
+    }
+    innerfunction()
+
+    }
+    outerfunction();
+
+
+
+
+    \\
+
+
+
+
+
+
+
+
+
+    
