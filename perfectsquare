@@ -1,0 +1,11 @@
+function perfectSquare(num) {
+    if (num < 0) return false; // Check for negative numbers
+    const sqrt = Math.sqrt(num); // Use Math.sqrt to calculate the square root
+    return Number.isInteger(sqrt); // Check if the square root is an integer
+}
+
+// Example Usage
+console.log(perfectSquare(25));  // Output: true
+console.log(perfectSquare(26));  // Output: false
+console.log(perfectSquare(-4));  // Output: false
+console.log(perfectSquare(0));   // Output: true
